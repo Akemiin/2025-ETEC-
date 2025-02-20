@@ -16,13 +16,14 @@ namespace Exemplo_Matematica
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();;
         }
+        double numero1, numero2, numero3, soma , multiplicacao , subtracao, divisao;
 
         private void btn_soma_Click(object sender, EventArgs e)
         {
             //criar variável
-            double numero1, numero2, numero3 , soma;
+
             numero1 = double.Parse(txt1.Text);
             numero2 = double.Parse(txt2.Text);
             numero3 = double.Parse(txt3.Text);
@@ -36,7 +37,7 @@ namespace Exemplo_Matematica
 
         private void btn_subtracao_Click(object sender, EventArgs e)
         {
-            double numero1 , numero2 , numero3 , subtracao;
+
             numero1 = double.Parse(txt1.Text);
             numero2 = double.Parse(txt2.Text);
             numero3 = double.Parse(txt3.Text);
@@ -49,7 +50,7 @@ namespace Exemplo_Matematica
 
         private void btn_divisao_Click(object sender, EventArgs e)
         {
-            double numero1 , numero2 , numero3 , divisao;
+
             numero1 = double.Parse(txt1.Text);
             numero2 = double.Parse(txt2.Text);
             numero3 = double.Parse(txt3.Text);
@@ -71,7 +72,7 @@ namespace Exemplo_Matematica
 
         private void btn_multiplicacao_Click(object sender, EventArgs e)
         {
-            double numero1, numero2, numero3, multiplicacao;
+
             numero1 = double.Parse(txt1.Text);
             numero2 = double.Parse(txt2.Text);
             numero3 = double.Parse(txt3.Text);
@@ -95,6 +96,7 @@ namespace Exemplo_Matematica
         }
     }
 }
+
 
 
 ---------- Form1.Designer.cs* ----------
@@ -325,3 +327,4 @@ namespace Exemplo_Matematica
         private System.Windows.Forms.TextBox txt3;
     }
 }
+
