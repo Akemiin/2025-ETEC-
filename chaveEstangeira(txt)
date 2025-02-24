@@ -1,0 +1,26 @@
+create database chaveEstrangeira;
+
+create table funcionario(
+matricula int(6) not null primary key,
+nome varchar(50) not null,
+endereco varchar(50) not null,
+cargo varchar(20) not null
+)
+
+create table dependente(
+RG varchar(12) not null primary key,
+nome varchar(50)not null,
+parentesco varchar(10)not null,
+matricula int(6) not null,
+foreign key (matricula) references funcionario (matricula)
+)
+
+create table depenFunc(
+rg varchar(12) not null,
+matricula int(6) not null,
+foreign key (rg) references dependente(rg),
+foreign key (matricula) references funcionario(matricula),
+primary key (rg, matricula)
+)
+
+cr
