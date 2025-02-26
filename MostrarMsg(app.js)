@@ -8,7 +8,7 @@ export default function App() {
   const{telefoneDigitado,setTelefoneDigitado}=useState('');
 
   function mostrarMsg(){
-    if (nomeDigitado == '' || telefone == '') ;
+    if (nomeDigitado == '' || telefoneDigitado == '') ;
     {
       alert("Preencha todos os campos!");
     }
