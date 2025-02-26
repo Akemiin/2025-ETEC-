@@ -1,0 +1,27 @@
+create database loja;
+
+create table cliente(
+
+CPF int(11) primary key not null,
+
+rua varchar(50) not null,
+bairro varchar(50 )not null,
+cidade varchar(50) not null,
+
+nome varchar(50) not null
+)
+
+ /* --------------------*/
+
+create table emailCliente(
+
+email varchar(50) not null,
+emailCod int(25) primary key not null,
+CPF int(11) not null,
+
+foreign key (CPF) references cliente (CPF)
+
+);
+
+/* --------------------*/
+
