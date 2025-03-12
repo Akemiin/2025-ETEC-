@@ -1,0 +1,14 @@
+alter table funcionarios
+add salario decimal(7,2) not null, 
+add cargo varchar(2) not null, 
+add ativo bit;
+
+insert into funcionarios values
+(01, 'Elisandra', 'rua das árvores' , 'professora')
+
+insert into funcionarios values 
+(1,'Eliana' , 'cidade'),
+(2,' Rafael', 'nome cidade')
+
+insert into funcionarios (idfuncionario, nome, endereco, cidade, estado, email, dataNascimento) values
+(1, 'Jose da Silva ', 'Av São Paulo, 34', 'Itu', 'Sp', 'zesilva@yahoo.com.br', '1991-02-24)
