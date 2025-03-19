@@ -36,9 +36,6 @@ telefonecod int(20),
 foreign key (telefonecod) references telefone (telefonecod)
 )
 
-
-
-
 create table possui(
 notaFiscal int(20) not null,
 codItensPedido int(20) not null,
@@ -49,4 +46,8 @@ foreign key (codigo) references mercadoria (codigo),
 foreign key (notafiscal) references pedido (notafiscal)
 )
 
+/* --------------------*/
 
+insert into funcionarios(idFuncionarios, nome, endereco, cidade, estado, email, dataNascimento) values
+(7,'Claudia Regina','Rua Holanda, 89', 'Campinas', 'SP', 'cregina@gmail.com', '04-12-1988'),
+(8, 'Marcela Tatho' ,'Rua bèlgica, 43', 'Campinas', 'Sp', 'marctatho@gmial.com', '09-11-1987')
