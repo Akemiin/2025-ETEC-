@@ -5,6 +5,17 @@ export default function App() {
   const [base, setBase] = useState(0);
   const [altura, setAltura] = useState(0);
   const [area, setArea] = useState(0);
+
+  function calcularArea()
+  {
+    if (base > 0 && altura > 0){
+      setArea((base*altura)/2);
+    }
+    else{
+      setArea(0);
+    }
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Cálculo área triângulo</Text>
@@ -45,11 +56,65 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
+    container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#dd9',
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
 
+  titulo:{
+  fontSize:25,
+  fontWeight:'bold',
+  marginBottom:60,
+  textShadowColor:"black",
+  textShadowOffset:{width:2, height: 2},
+  textShadowRadius:3
+  },
+
+  texto:{
+  fontSize:22,
+  color:'#a45',
+  alignSelf:'flex-start',
+  marginLeft:10,
+  marginTop:10,
+  fontFamily:'Cooper Black'
+  },
+
+  input:{
+  width:'100%',
+  height:50,
+  backgroundColor:'#d0d0d0',
+  borderRadius:8,
+  paddingHorizontal:15,
+  fontSize:18,
+  borderWidth:4,
+  borderColor:'#a52a2a',
+  marginVertical: 12,
+  shadowColor:'#000',
+  shadowOffSet:{width:10, height:20},
+  shadowOpacity:0.2,
+  shadowRadius:3
+  },
+
+  botao:{
+  width:'100%',
+  backgroundColor:'#a52a52',
+  paddingVertical:15,
+  borderradius:8,
+  alignItens:'center',
+  margintop:20,
+  shadowColor:'#fff',
+  shadowOffSet:{width:10, height:6},
+  shadowOpacity:0.3,
+  shadowRadius:4
+  },
+
+  textoBotao:{
+  fontSize:20,
+  color: "#fff",
+  fontWeight:'bold',
+  fontFamily:'stencil'
+  }
+
+});
