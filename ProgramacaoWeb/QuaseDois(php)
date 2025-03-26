@@ -1,0 +1,17 @@
+<h1>Quase 2, loja de R$ 1,99! <br></h1>
+<h2>  ~ Tabela De Preços ~ <br> </h2>
+ 
+<?php
+
+$valor = 1.99;
+
+ echo "1 produto = R$ 1,99 reais <br> ";
+
+for($contador = 2; $contador <= 50; $contador++){ 
+    $resultado = $valor * $contador;
+
+    echo " " . $contador . " produtos = R$ " . $resultado . " reais <br>";
+
+}
+
+?>
