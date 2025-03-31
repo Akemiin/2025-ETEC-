@@ -1,0 +1,51 @@
+create database Avaliacao ;
+
+create table compra(
+valorTotal decimal(5,2) not null,
+datas date not null,
+codCompra int(10) primary key not null );
+
+create table produto (
+preco decimal(5,2) not null,
+codProduto int(10) primary key not null,
+dercricao varchar(50) not null,
+qtdProduto int(10) not null)
+
+create table itensComprados (
+valoruUnitario decimal(6,2) not null,
+qtdItens int(10) not null,
+codPC int(10) primary key not null,
+codProduto int(10) not null,
+codCompra int(10) not null
+
+foreign key (codCompra) references compra (codCompra)
+foreign key (codProduto) references produto (codProduto)
+
+)
+
+insert into produto values
+(001, 1000, 'arroz', 10),
+(002, 350, 'café', 5),
+(003, 100, 'feijão',5);
+
+insert into compra values
+(35, '2015-04-01',1212),
+(50,' 2015-04-08',1313),
+(50, '2015-09-12',1414);
+
+insert into itensComprados values
+(20,2,120,001,1212),
+(15,3,121,002,1212),
+(50,10,130,002, 1313),
+(50,5,140,001,1414);
+
+alter table produto add status varchar(30) not null;
+
+Alter table itensComprados drop valoruUnitario;
+
+delete from produto where codProduto = 3
+
+update produto
+set dercricao = 'açucar'
+where dercricao = 'café'
+
