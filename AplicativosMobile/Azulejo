@@ -1,0 +1,169 @@
+import {useState} from 'react';
+import { StyleSheet, Text, View,TextInput, TouchableOpacity } from 'react-native';
+
+export default function App() {
+  const [base, setBase] = useState(0);
+  const [altura, setAltura] = useState(0);
+  const [area, SetArea] = useState(0);
+
+  const [alturaAzulejo, setAlturaAzulejo] = useState(0);
+  const [areaAzulejo, setAreaAzulejo] = useState(0);
+  const [baseAzulejo, setBaseAzulejo] =useState(0);  
+  const [azulejo, setAzulejo] = useState(0);
+
+
+  function executarFuncoes(){
+  function calcularArea()
+    {
+      if (base > 0 && altura > 0){
+        setArea(base*altura);
+      }
+      else{
+        setArea(0);
+      }
+    }
+
+    function calcularAreaAzulejo()
+      {
+        if (baseAzulejo > 0 && alturaAzulejo > 0){
+          setAreaAzulejo(baseAzulejo*alturaAzulejo);
+        }
+        else{
+          setAreaAzulejo(0);
+        }
+      }
+
+    function calcularAzulejo()
+      {
+        if (areaAzulejo > 0 && area > 0){
+          setAzulejo(area/areaAzulejo);
+        }
+        else{
+          setAreaAzulejo(0);
+        }
+      }
+
+  }
+  
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titulo}>Cálculo azulejos</Text>
+
+      <Text style={styles.texto}>Digite o Valor da base da parede: </Text>
+      <TextInput placeholder='valor Base'
+      placeholderTextColor={"#d0d0d0"}
+      style={styles.input}
+      keyboardType={'numeric'}
+      onChangeText={setBase}
+      >
+
+      </TextInput>
+
+      <Text style={styles.texto}>Digite o Valor da altura da parede: </Text>
+      <TextInput placeholder='valor Altura'
+      placeholderTextColor={"#d0d0d0"}
+      style={styles.input}
+      keyboardType={'numeric'}
+      onChangeText={setAltura}
+      >
+
+      </TextInput>
+
+      <Text style={styles.texto}>Digite o Valor da base do azulejo: </Text>
+      <TextInput placeholder='valor Base azulejo'
+      placeholderTextColor={"#d0d0d0"}
+      style={styles.input}
+      keyboardType={'numeric'}
+      onChangeText={setBaseAzulejo}
+      >
+
+      </TextInput>
+
+      <Text style={styles.texto}>Digite o Valor da altura do azulejo: </Text>
+      <TextInput placeholder='valor altura azulejo'
+      placeholderTextColor={"#d0d0d0"}
+      style={styles.input}
+      keyboardType={'numeric'}
+      onChangeText={setAlturaAzulejo}
+      >
+
+      </TextInput>
+
+      <Text style={styles.texto}>Azulejos necessários: </Text>
+      <TextInput placeholder='valor azulejo'
+      placeholderTextColor={"#d0d0d0"}
+      style={styles.input}
+      keyboardType={'numeric'}
+      onChangeText={setAzulejo}
+      >
+
+      </TextInput>
+
+      <TouchableOpacity
+      style={styles.botao}
+      onpress={executarFuncoes}
+      >
+
+        <Text style={styles.textoBotao}>Calcular</Text>
+
+      </TouchableOpacity>
+      
+
+      <Text style={{fontFamily:'Castellar', fontSize:30, color:'#d00s8'}}>{azulejo ? `Resultado : ${azulejo}` : `` }</Text>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+    container: {
+    flex: 1,
+    backgroundColor: '#dd9',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  titulo:{
+  fontSize:25,
+  fontWeight:'bold',
+  marginBottom:60
+  },
+
+  texto:{
+  fontSize:22,
+  color:'#a45',
+  alignSelf:'flex-start',
+  marginLeft:10,
+  marginTop:10,
+  fontFamily:'Cooper Black'
+  },
+
+  input:{
+  width:'100%',
+  height:50,
+  backgroundColor:'#d0d0d0',
+  borderRadius:8,
+  paddingHorizontal:15,
+  fontSize:18,
+  borderWidth:4,
+  borderColor:'#a52a2a',
+  marginVertical: 12
+  },
+
+  botao:{
+  width:'100%',
+  backgroundColor:'#a52a52',
+  paddingVertical:15,
+  borderradius:8,
+  alignItens:'center',
+  margintop:20
+  },
+
+  textoBotao:{
+  fontSize:20,
+  color: "#fff",
+  fontWeight:'bold',
+  fontFamily:'stencil'
+  }
+
+});
