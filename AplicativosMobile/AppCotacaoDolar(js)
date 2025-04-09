@@ -1,42 +1,40 @@
-import {useState} from 'react';
-import { StyleSheet, Text, View,TextImput, TouchableOpacity, Keyboard } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 
 export default function App() {
 
   const [dolar, setDolar] = useState(0);
   const [real, setReal] = useState(0);
 
-  function calcularDolar (){
-    if(dolar > 0){
-      setDolar(real*5.98);
-    }
-    else{
+  function calcularDolar() {
+    if (real > 0) {
+      setDolar(real * 5.98);
+    } else {
       setDolar(0);
     }
-
   }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Cotação do Dolar </Text>
+      <Text style={styles.titulo}>Cotação do Dolar</Text>
 
-      <Text style={styles.texto}>Digite o valor de quantos reais você tem : </Text>
-      <TextImput placeholder='Quantidade Dolar'
-       keyboardType={'numeric'}
-       placeholderColor={'#fff7'}
-       onSetText={setReal}
-       style={styles.imput}
-      >
-
-      </TextImput>
+      <Text style={styles.texto}>Digite o valor de quantos reais você tem: </Text>
+      <TextInput
+        placeholder='Quantidade em Reais'
+        keyboardType={'numeric'}
+        placeholderTextColor={'#fff7'}
+        onChangeText={setReal}
+        style={styles.imput}
+      />
 
       <TouchableOpacity
-      style={styles.botao}
-      onpress={SetDolar}
+        style={styles.botao}
+        onPress={calcularDolar}
       >
         <Text style={styles.textoBotao}>Calcular</Text>
-
       </TouchableOpacity>
 
+      <Text style={styles.texto}>Valor em Dólares: {dolar?dolar:"valor não encontrado"}</Text>
     </View>
   );
 }
@@ -44,46 +42,43 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#fff',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
   },
-  titulo:{
-    fontSize:25
+
+  titulo: {
+    fontSize: 25
   },
 
-  texto:{
-    color:'#111',
-    fontSize:15
+  texto: {
+    color: '#111',
+    fontSize: 15
   },
 
-  botao:{
-    width:'100%',
-    backgroundColor:'#a52a52',
-    paddingVertical:15,
-    borderradius:8,
-    alignItens:'center',
-    margintop:20,
-    shadowColor:'#fff',
-    shadowOffSet:{width:10, height:6},
-    shadowOpacity:0.3,
-    shadowRadius:4
+  botao: {
+    width: '80%',
+    backgroundColor: '#f598c2',
+    paddingVertical: 15,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginTop: 20
   },
 
-  imput:
-  {
-width:'100%',
-  height:50,
-  backgroundColor:'#d0d0d0',
-  borderRadius:8,
-  paddingHorizontal:15,
-  fontSize:18,
-  borderWidth:4,
-  borderColor:'#a52a2a',
-  marginVertical: 12,
-  shadowColor:'#000',
-  shadowOffSet:{width:10, height:20},
-  shadowOpacity:0.2,
-  shadowRadius:3
+  imput: {
+    width: '80%',
+    height: 50,
+    backgroundColor: '#f598c2',
+    borderRadius: 8,
+    paddingHorizontal: 15,
+    fontSize: 18,
+    borderWidth: 4,
+    borderColor: '#f598c2',
+    marginVertical: 12
+  },
+
+  textoBotao: {
+    color: '#fff',
+    fontSize: 18
   }
 });
