@@ -14,6 +14,25 @@ export default function App() {
   const [valor,setValor] = useState(15000);
   const [utilitario,setUtilitario] = useState(false);
   const [checked,setChecked] = useState('Masculino');
+
+  const isWeb = typeof navigator !== 'undefined' && navigator.userAgent;
+
+  const modelos=[
+   {modeloNome: 'Match', valor: 1},
+   {modeloNome: 'Pick-up', valor: 2},
+   {modeloNome: 'Sedan', valor:3},
+   {modeloNome: 'SUV', valor:4},
+  ]
+
+  let modeloItems = modelo.map((v,k) => {
+    return <Picker.Item key={k} value={k} label={v.modeloNome}>
+
+    </Picker.Item>
+  });
+
+  function enviarDados(){
+    
+  }
  
   return (
     <View style={styles.container}>
@@ -84,8 +103,27 @@ export default function App() {
           maximumValue={2400000}
           value={valor}
           onValueChange={setValor}
-          
+
           ></Slider>
+        </View>
+
+        <View style={styles.areaUtilitario}>
+          <Text style={styles.textoNome}>Utilitário</Text>
+          <Switch style={ isWeb ? {transform : [{translateY: -2}]} : {}}
+          trackColor={{false: "#ccc", true: "rgb(87, 252, 92)"}}
+          thumbColor="#432"
+          value ={utilitario}
+          onValueChange={setUtilitario}
+          ></Switch>
+
+          <TouchableOpacity style={styles.botao}
+          onPress={enviarDados}>
+
+            <Text style={styles.botaoTexto}>
+              Mostrar Dados Carros
+            </Text>
+            
+          </TouchableOpacity>
         </View>
 
       </View>
