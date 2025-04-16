@@ -12,3 +12,5 @@ insert into funcionarios values
 
 insert into funcionarios (idfuncionario, nome, endereco, cidade, estado, email, dataNascimento) values
 (1, 'Jose da Silva ', 'Av São Paulo, 34', 'Itu', 'Sp', 'zesilva@yahoo.com.br', '1991-02-24)
+
+Select nome, month(dataNascimento), day(dataNascimento), year(dataNascimento) from funcionarios
