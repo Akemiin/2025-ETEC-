@@ -1,0 +1,50 @@
+<h1> Calculadora ( + - * / )</h1>
+
+<form method = "GET" action="dados.php">
+<label>número 1 : </label>
+<input type = "text" name="n1"/>
+
+<br></br>
+
+<label>número 2 : </label>
+<input type = "text" name ="n2" >
+
+<br></br>
+
+<label>operação : </label>
+<input type = "text" name ="op" >
+
+<br></br>
+
+<button>Enviar</button>
+
+</form>
+
+------------------------------------------------------------
+
+(dados.php)
+
+<?php
+$n1 = $_GET['n1'];
+$n2 = $_GET['n2'];
+$op = $_GET['op'];
+
+if($op == '+'){
+    $resultado = $_GET['n1'] + $_GET['n2'];
+}
+else if($op == '-'){
+    $resultado = $_GET['n1'] - $_GET['n2'];
+}
+else if($op == '*'){
+    $resultado = $_GET['n1'] * $_GET['n2'];
+}
+else if($op == '/'){
+    $resultado = $_GET['n1'] / $_GET['n2'];
+}
+else{
+    Echo "Operação não determinada ";
+}
+
+echo $resultado
+
+?>
