@@ -1,0 +1,9 @@
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\bin\Debug\herança.exe.config
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\bin\Debug\herança.exe
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\bin\Debug\herança.pdb
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\obj\Debug\herança.csprojResolveAssemblyReference.cache
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\obj\Debug\herança.Form1.resources
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\obj\Debug\herança.Properties.Resources.resources
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\obj\Debug\herança.csproj.GenerateResource.Cache
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\obj\Debug\herança.exe
+C:\Users\ds-mtec-2\Desktop\Desenvolvimento de sistemas\revisão\herança\herança\obj\Debug\herança.pdb
