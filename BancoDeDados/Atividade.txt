@@ -1,0 +1,2 @@
+select upper(nome) from funcionarios;
+select length(dataNascimento) from funcionarios;
