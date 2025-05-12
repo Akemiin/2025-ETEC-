@@ -1,2 +1,21 @@
-select upper(nome) from funcionarios;
-select length(dataNascimento) from funcionarios;
+SELECT UPPER(nome) from funcionarios;
+SELECT LENGTH(dataNascimento) from funcionarios;
+SELECT REPLACE(nome, ' ', '-') from funcionarios;
+SELECT LEFT (nome,3) from funcionarios;
+SELECT RIGHT (nome,3) from funcionarios;
+(raiz quadrada dos nomes);
+SELECT SUBSTRING(cidade, 3,5) from funcionarios;
+SELECT 
+
+
+Exiba os nomes dos funcionários, retirando os espaços existentes entre nomes 
+e sobrenomes.
+8. Exiba o caractere padrão ASCII do idFuncionario dos funcionários de Campinas.
+9. Indique o valor do caractere da tabela ASCII referente aos nomes dos 
+funcionários que nasceram após o dia 20.
+10. Exiba os quatros primeiros caracteres das cidades dos funcionários sem espaço 
+em branco no final.
+11. Exiba os seis últimos caracteres das cidades dos funcionários sem espaço em 
+branco no inicio.
+12. Apresente o nome das cidades dos funcionários em letras minúsculas sem 
+repeti-las
