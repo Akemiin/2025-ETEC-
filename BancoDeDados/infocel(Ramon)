@@ -1,0 +1,8 @@
+create database infocel;
+
+create table celular(
+numero varchar(15) primary key,
+modelo varchar(15),
+processador varchar(15),
+fabricacao varchar(15)
+)
